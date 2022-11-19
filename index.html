@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #1367a7;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-6 {
+     width: 16.6%;
+     float: left;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.row, .author-row, .affil-row {
+     overflow: auto;
+}
+.author-row, .affil-row {
+    font-size: 20px;
+}
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 16px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    /*font-style: italic;*/
+    color: #666;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+
+.supp-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #1367a7;
+  color: #ecf0f1 !important;
+  font-size: 20px;
+  width: 150px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+.paper-btn:hover {
+    opacity: 0.85;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.venue {
+    color: #1367a7;
+}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+</style>
+
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+    <title>Tune-A-Video</title>
+    <meta property="og:description" content="Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+ <body>
+<div class="container">
+    <div class="paper-title">
+      <h1>Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation</h1>
+    </div>
+
+    
+    <div id="authors">
+        <div class="affil-row">
+            <div class="venue text-center"><b>Anonymous Submission</b></div>
+        </div>
+    </div>
+
+    <section id="teaser">
+            <figure style="width: 80%;">
+                <a href="assets/teaser.png">
+                    <img width="100%" src="assets/teaser.png">
+                </a>
+                <p class="caption" style="margin-bottom: 1px;  text-align: center">
+                   We propose Tune-A-Video, for producing diverse and temporally-coherent videos through one-shot tunning.
+                </p>
+            </figure>
+            <br>
+    </section>
+
+    <section id="abstract"/>
+    <h2>Abstract</h2>
+    <hr>
+    <p>
+        To reproduce the success of text-to-image (T2I) generation, recent works in text-to-video (T2V) generation employ large-scale text-video dataset for fine-tuning. However, such paradigm is computationally expensive. Humans have the amazing ability to learn new visual concepts from just one single exemplar. We hereby study a new T2V generation problem—One-Shot Video Generation, where only a single text-video pair is presented for training an open-domain T2V generator. Intuitively, we propose to adapt the T2I diffusion model pretrained on massive image data for T2V generation. We make two key observations: 1) T2I models are able to generate images that align well with the verb terms; 2) extending T2I models to generate multiple images concurrently exhibits surprisingly good content consistency. To further learn continuous motion, we propose Tune-A-Video with a tailored Sparse-Causal Attention, which generates videos from text prompts via an efficient one-shot tuning of pretrained T2I diffusion models. Tune-A-Video is capable of producing temporally-coherent videos over various applications such as change of subject or background, attribute editing, style transfer, demonstrating the versatility and effectiveness of our method.
+    </p>
+    </section>
+
+    <br/>
+
+    <h2>Results</h2>
+    <hr>
+    <table width="100%" align="center">
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">A lady in yellow dress is surfing a wave.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A policeman is surfing a wave.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A sloth is surfing a wave.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">An astronaut is surfing a wave.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A teddy bear is surfing a wave, cartoon style.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/man-surfing/lady-yellow.gif"><img width="100%" src="tav_results/man-surfing/lady-yellow.gif"></a></td>
+            <td><a href="tav_results/man-surfing/policeman-wave.gif"><img width="100%" src="tav_results/man-surfing/policeman-wave.gif"></a></td>
+            <td><a href="tav_results/man-surfing/sloth-wave.gif"><img width="100%" src="tav_results/man-surfing/sloth-wave.gif"></a></td>
+            <td><a href="tav_results/man-surfing/astronaut-wave.gif"><img width="100%" src="tav_results/man-surfing/astronaut-wave.gif"></a></td>
+            <td><a href="tav_results/man-surfing/teddy-cartoon.gif"><img width="100%" src="tav_results/man-surfing/teddy-cartoon.gif"></a></td>              
+        </tr>
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">A gorilla is doing push-ups in the gym.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A man is doing push-ups on the beach.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A man is doing push-ups in the forest.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A man in red clothes is doing push-ups in the gym.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">An old man is doing push-ups in the gym.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/man-pushing/gorilla-gym.gif"><img width="100%" src="tav_results/man-pushing/gorilla-gym.gif"></a></td>
+            <td><a href="tav_results/man-pushing/man-beach.gif"><img width="100%" src="tav_results/man-pushing/man-beach.gif"></a></td>
+            <td><a href="tav_results/man-pushing/man-forest.gif"><img width="100%" src="tav_results/man-pushing/man-forest.gif"></a></td>
+            <td><a href="tav_results/man-pushing/red-gym.gif"><img width="100%" src="tav_results/man-pushing/red-gym.gif"></a></td>
+            <td><a href="tav_results/man-pushing/old-gym.gif"><img width="100%" src="tav_results/man-pushing/old-gym.gif"></a></td>              
+        </tr>
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">A student is dribbling a basketball on the court.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">Kobe Bryant is dribbling a volleyball in the court, cartoon style.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">Iron Man is dribbling a basketball in the court.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">Peppa Pig is dribbling a basketball on the court.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A monkey is dribbling a football on the grass.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/man-dribbling/student-court.gif"><img width="100%" src="tav_results/man-dribbling/student-court.gif"></a></td>
+            <td><a href="tav_results/man-dribbling/kobe-volleyball.gif"><img width="100%" src="tav_results/man-dribbling/kobe-volleyball.gif"></a></td>
+            <td><a href="tav_results/man-dribbling/ironman-court.gif"><img width="100%" src="tav_results/man-dribbling/ironman-court.gif"></a></td>
+            <td><a href="tav_results/man-dribbling/peppa-court.gif"><img width="100%" src="tav_results/man-dribbling/peppa-court.gif"></a></td>              
+            <td><a href="tav_results/man-dribbling/monkey-football.gif"><img width="100%" src="tav_results/man-dribbling/monkey-football.gif"></a></td>
+        </tr>
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">A man is skiing on snow at night.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A man, wearing red, is skiing on snow.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">Iron Man is skiing on snow.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">An astronaut is skiing on the moon.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A panda is skiing on the snow, cartoon style.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/man-skiing/man-night.gif"><img width="100%" src="tav_results/man-skiing/man-night.gif"></a></td>
+            <td><a href="tav_results/man-skiing/man-red.gif"><img width="100%" src="tav_results/man-skiing/man-red.gif"></a></td>
+            <td><a href="tav_results/man-skiing/ironman-snow.gif"><img width="100%" src="tav_results/man-skiing/ironman-snow.gif"></a></td>
+            <td><a href="tav_results/man-skiing/astronaut-moon.gif"><img width="100%" src="tav_results/man-skiing/astronaut-moon.gif"></a></td>
+            <td><a href="tav_results/man-skiing/panda-cartoon.gif"><img width="100%" src="tav_results/man-skiing/panda-cartoon.gif"></a></td>              
+        </tr>
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">A cat is running on the grass.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A lion is running on the lawn.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A corgi dog is running in the autumn forest.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A pig is running in Time Square.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A wolf is walking on the street.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/dog-running/cat-grass.gif"><img width="100%" src="tav_results/dog-running/cat-grass.gif"></a></td>
+            <td><a href="tav_results/dog-running/lion-lawn.gif"><img width="100%" src="tav_results/dog-running/lion-lawn.gif"></a></td>
+            <td><a href="tav_results/dog-running/corgi-forest.gif"><img width="100%" src="tav_results/dog-running/corgi-forest.gif"></a></td>
+            <td><a href="tav_results/dog-running/pig-timesquare.gif"><img width="100%" src="tav_results/dog-running/pig-timesquare.gif"></a></td>
+            <td><a href="tav_results/dog-running/wolf-street.gif"><img width="100%" src="tav_results/dog-running/wolf-street.gif"></a></td>              
+        </tr>
+        <tr>
+            <td  width="20%" style="text-align:center; font-size:10px">Iron man is running on the beach at dusk.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">A girl is running on the lawn.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">An old man is running on the mountain.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">King Kong is running in the forest.</td>
+            <td  width="20%" style="text-align:center; font-size:10px">An astronaut is running in the sea, cartoon style.</td>
+        </tr>
+        <tr>
+            <td><a href="tav_results/man-running/ironman-beach.gif"><img width="100%" src="tav_results/man-running/ironman-beach.gif"></a></td>
+            <td><a href="tav_results/man-running/girl-lawn.gif"><img width="100%" src="tav_results/man-running/girl-lawn.gif"></a></td>
+            <td><a href="tav_results/man-running/old-mountain.gif"><img width="100%" src="tav_results/man-running/old-mountain.gif"></a></td>
+            <td><a href="tav_results/man-running/kingkong-forest.gif"><img width="100%" src="tav_results/man-running/kingkong-forest.gif"></a></td>
+            <td><a href="tav_results/man-running/astronaut-sea.gif"><img width="100%" src="tav_results/man-running/astronaut-sea.gif"></a></td>              
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
